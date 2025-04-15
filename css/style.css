@@ -14,7 +14,7 @@
         --main-color: #b26f42;
         --color-1: #e91e63;
         --color-2: #f5ae10;
-        --color-3: #09d69c;
+        --color-3: #f5ae10;
         --bg-dark: #2b2c2f;
         --main-to-dark-color: var(--main-color);
         --dark-to-main-color: var(--bg-dark);
