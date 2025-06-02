@@ -7,7 +7,50 @@
     /*----------------
         Global css
     -------------------*/
+    
+.agenda-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
 
+.agenda-tab {
+    padding: 0.6rem 2.2rem;
+    border: none;
+    outline: none;
+    font-size: 1.18rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #b26f42 60%, #d7a06e 100%);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 1.3rem 1.3rem 0 0;
+    box-shadow: 0 4px 14px rgba(178,111,66, 0.13);
+    transition: 
+        background 0.24s,
+        color 0.18s,
+        transform 0.18s,
+        box-shadow 0.19s;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+}
+
+.agenda-tab:not(.active):hover {
+    background: linear-gradient(90deg, #d7a06e 70%, #b26f42 100%);
+    color: #fff;
+    transform: translateY(-4px) scale(1.07);
+    box-shadow: 0 6px 20px rgba(178,111,66, 0.21);
+}
+
+.agenda-tab.active {
+    background: linear-gradient(90deg, #7c4827 70%, #b26f42 100%);
+    color: #fff;
+    transform: translateY(-8px) scale(1.13);
+    box-shadow: 0 10px 28px rgba(178,111,66, 0.27);
+    z-index: 1;
+}
     :root {
         /* #6b51f0*/
         /*a200ff*/

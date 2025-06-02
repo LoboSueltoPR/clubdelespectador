@@ -154,3 +154,16 @@ function updateIcon() {
 
     }
 }
+
+function mostrarMes(mes) {
+    // Oculta todos los timelines
+    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+    // Saca el activo de todos los botones
+    document.querySelectorAll('.agenda-tab').forEach(btn => btn.classList.remove('active'));
+    // Muestra el mes seleccionado
+    document.getElementById(mes).style.display = 'block';
+    // Activa el botón correspondiente
+    document.querySelectorAll('.agenda-tab').forEach(btn => {
+        if (btn.textContent.trim().toLowerCase() === mes) btn.classList.add('active');
+    });
+}
