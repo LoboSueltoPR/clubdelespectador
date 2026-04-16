@@ -1,0 +1,349 @@
+/* ==============================================
+   NUEVA IMPRONTA VISUAL - AGENDA MODERNA
+   ============================================== */
+
+:root {
+  --primary-color: #b26f42;
+  --primary-dark: #8b5235;
+  --primary-light: #d7a06e;
+  --accent-gold: #daa520;
+  --accent-red: #e63946;
+  --bg-light: #f9f7f4;
+  --text-dark: #2c2c2c;
+  --text-light: #666;
+  --border-light: #e5d5c5;
+}
+
+/* Sección de Agenda */
+.videos-del-encuentro {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+/* Título de Sección */
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.section-title h2 span {
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2 span::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-gold));
+  border-radius: 3px;
+}
+
+.section-title p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Tabs de Agenda */
+.agenda-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 3% auto 1.5rem !important;
+  flex-wrap: wrap;
+}
+
+.agenda-tab {
+  padding: 0.8rem 2.5rem;
+  border: 2px solid var(--primary-color);
+  outline: none;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.agenda-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  z-index: -1;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agenda-tab:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(178, 111, 66, 0.2);
+}
+
+.agenda-tab:hover::before {
+  left: 0;
+}
+
+.agenda-tab.active {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(178, 111, 66, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Contenedor de Agenda */
+.agenda-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-gold) 50%, var(--primary-color) 100%);
+  transform: translateX(-50%);
+}
+
+/* Evento */
+.event {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+  opacity: 0;
+  animation: slideInEvent 0.6s ease-out forwards;
+}
+
+@keyframes slideInEvent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event:nth-child(1) { animation-delay: 0.1s; }
+.event:nth-child(2) { animation-delay: 0.2s; }
+.event:nth-child(3) { animation-delay: 0.3s; }
+.event:nth-child(n+4) { animation-delay: 0.4s; }
+
+/* Punto en la línea */
+.event::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.event:hover::after {
+  width: 24px;
+  height: 24px;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 8px rgba(218, 165, 32, 0.1);
+}
+
+/* Fecha y Hora */
+.date-time {
+  width: 40%;
+  text-align: right;
+  padding-right: 40px;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.date-time p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.date-time p:first-child {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.date-time p:last-child {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+/* Detalles del Evento */
+.details {
+  width: 40%;
+  padding-left: 40px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.event:hover .details {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateX(4px);
+  border-left-color: var(--accent-gold);
+}
+
+.details h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.details p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.details p:last-child {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .agenda-tabs {
+    gap: 0.5rem;
+  }
+
+  .agenda-tab {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .event {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .event::after {
+    left: 15px;
+  }
+
+  .date-time {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
+
+  .details {
+    width: 100%;
+    margin-left: 40px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .agenda-tab {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .details h3 {
+    font-size: 1.1rem;
+  }
+
+  .date-time p:first-child {
+    font-size: 0.9rem;
+  }
+
+  .date-time p:last-child {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tema Oscuro */
+[data-theme="dark"] .videos-del-encuentro {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .section-title h2 {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .date-time p:last-child {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .details {
+  background: #2d2d2d;
+  color: #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .details h3 {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .details p {
+  color: #b0b0b0;
+}

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/agenda-modern.css">
 </head>
 
 <body>
@@ -86,231 +87,16 @@
         </div>
     </section>
     <!--Inicio section End-->
-    <!-- Agenda -->
-    <section class="videos-del-encuentro section-padding" id="videos" data-scroll-index="2">
-    <div class="section-title"data-scroll-index="1">
-        <h2>Agenda <span>Semanal</span> </h2>
-    </div>
-
-    <div class="agenda-tabs" style="display: flex; gap: 1rem;margin-top: 3%; margin-bottom: 1.5rem;">
-        <button class="agenda-tab active" onclick="mostrarMes('mayo')">Mayo</button>
-        <button class="agenda-tab" onclick="mostrarMes('junio')">Junio</button>
-    </div>
-
-     <div id="mayo" class="timeline tab-content" style="display: block;">
-            <!-- Viernes 30 -->
-                <div class="event">
-                <div class="date-time">
-                    <p>30 May 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Una noche para reír | El Núcleo Teatro</h3>
-                    <p>Las Heras 84</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>30 May 2025</p>
-                    <p>21:30 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Ramos Generales | Juanita Primera</h3>
-                    <p>Alvarado 818</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>30 May 2025</p>
-                    <p>20:30 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Desde el alma | Don Osvaldo</h3>
-                    <p>Lamadrid 544</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>30 May 2025</p>
-                    <p>21:30 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Cci Flamenca + Dúo Odda | Kanika</h3>
-                    <p>Belgrano 249</p>
-                </div>
-            </div>
-
-            <!-- Sábado 31 -->
-            <div class="event">
-                <div class="date-time">
-                    <p>31 May 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Los diarios de Adán y Eva | El Tablado</h3>
-                    <p>Chiclana 453</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>31 May 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Astor Vitali Cuartero | B. Rivadavia</h3>
-                    <p>Colón 31</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>31 May 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Prisma x tu mejor carta | La Macanuda</h3>
-                    <p>Moreno 233</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>31 May 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Escorpio | Juanita Primera</h3>
-                    <p>Alvarado 818</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>31 May 2025</p>
-                    <p>21:30 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Milonga | Kanika</h3>
-                    <p>Belgrano 249</p>
-                </div>
-            </div>
-    </div>
-    <div id="junio" class="timeline tab-content" style="display: none;">
-        <!-- Domingo 1 -->
-            <div class="event">
-                <div class="date-time">
-                    <p>01 Jun 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Extraña muerte | La Macanuda</h3>
-                    <p>Moreno 223</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>01 Jun 2025</p>
-                    <p>20:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>El loco y la camisa | Juanita Primera</h3>
-                    <p>Alvarado 818</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>01 Jun 2025</p>
-                    <p>29:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Cama 5 | Auditorio Luis Caronti</h3>
-                    <p>Av. Colón 31</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>01 Jun 2025</p>
-                    <p>20:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Genealogía y Épica para | Don Osvaldo</h3>
-                    <p>Lamadrid 544</p>
-                </div>
-            </div>
-
-            <!-- Viernes 6 -->
-            <div class="event">
-                <div class="date-time">
-                    <p>06 Jun 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Una noche para reír | El Núcleo Teatro</h3>
-                    <p>Las Heras 84</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>06 Jun 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Marcelo escales grupo | B. Rivadavia</h3>
-                    <p>Av. Colón 31</p>
-                </div>
-            </div>
-
-            <!-- Sábado 7 -->
-            <div class="event">
-                <div class="date-time">
-                    <p>07 Jun 2025</p>
-                    <p>19:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Ciclo Relámpago | B. Rivadavia</h3>
-                    <p>Av. Colón 31</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>07 Jun 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Los monstruos | El Tablado</h3>
-                    <p>Chiclana 453</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>07 Jun 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Chamuyo | Casa del Pueblo</h3>
-                    <p>Saavedra 282</p>
-                </div>
-            </div>
-
-            <!-- Domingo 8 -->
-            <div class="event">
-                <div class="date-time">
-                    <p>08 Jun 2025</p>
-                    <p>21:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Entre sombras y recuerdos | Clou</h3>
-                    <p>Las Heras 543</p>
-                </div>
-            </div>
-            <div class="event">
-                <div class="date-time">
-                    <p>08 Jun 2025</p>
-                    <p>20:00 HS</p>
-                </div>
-                <div class="details">
-                    <h3>Troverias | A. Luis Caronti</h3>
-                    <p>Av. Colón 31</p>
-                </div>
-            </div>
-    </div>
+    <!-- Agenda Dinámica desde Google Sheets -->
+    <section class="videos-del-encuentro section-padding" id="agenda" data-scroll-index="1">
+        <div class="section-title">
+            <h2>Agenda <span>Semanal</span></h2>
+            <p style="margin-top: 1rem; opacity: 0.8;">Cargando eventos...</p>
+        </div>
+        <div class="agenda-container">
+            <!-- Se carga dinámicamente desde Google Sheets -->
+        </div>
+    </section>
 
     <!-- Espacios Culturales section start -->
     <section class="testimonials section-padding" data-scroll-index="2" id="testimonials">
@@ -846,6 +632,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/scrollIt.min.js"></script>
+    <script src="js/agenda-sheets.js"></script>
     <script src="js/script.js"></script>
 
 
